@@ -2,1115 +2,413 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>FCI Recruitment 2026 Notification</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FCI Recruitment 2026 Notification, Eligibility, 33566 Vacancies</title>
     <style>
-        /* Reset and Base Styles */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            -webkit-tap-highlight-color: transparent;
-        }
-        
-        html {
-            font-size: 16px;
-            scroll-behavior: smooth;
+            font-family: Arial, sans-serif;
         }
         
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-            line-height: 1.5;
-            color: #333;
-            background-color: #f5f7fa;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-        
-        /* Mobile-First Container */
-        .container {
-            width: 100%;
-            max-width: 100%;
-            margin: 0 auto;
-            padding: 0;
-            overflow-x: hidden;
-        }
-        
-        /* Header - Mobile Optimized */
-        .mobile-header {
-            background: linear-gradient(135deg, #1a4c8c 0%, #0a2c5e 100%);
-            color: white;
-            padding: 12px 15px;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-            width: 100%;
-        }
-        
-        .header-top {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 10px;
-        }
-        
-        .logo-container {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            flex: 1;
-        }
-        
-        .logo-icon {
-            font-size: 24px;
-            color: #ffcc00;
-            flex-shrink: 0;
-        }
-        
-        .logo-text h1 {
-            font-size: 18px;
-            font-weight: 700;
-            line-height: 1.2;
-            margin-bottom: 2px;
-        }
-        
-        .logo-text span {
-            font-size: 11px;
-            opacity: 0.9;
-            display: block;
-        }
-        
-        .mobile-date {
-            font-size: 12px;
-            background: rgba(255, 255, 255, 0.15);
-            padding: 6px 10px;
-            border-radius: 15px;
-            white-space: nowrap;
-            margin-left: 10px;
-        }
-        
-        /* Mobile Menu Button */
-        .menu-toggle {
-            background: none;
-            border: none;
-            color: white;
-            font-size: 20px;
-            cursor: pointer;
-            padding: 5px;
-            margin-left: 10px;
-        }
-        
-        /* Mobile Navigation */
-        .mobile-nav {
-            display: none;
-            background: #0a2c5e;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            width: 100%;
-            z-index: 999;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-        
-        .mobile-nav.active {
-            display: block;
-        }
-        
-        .nav-links {
-            list-style: none;
-            padding: 0;
-        }
-        
-        .nav-links li {
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        .nav-links a {
-            display: flex;
-            align-items: center;
-            padding: 15px;
-            color: white;
-            text-decoration: none;
-            font-size: 15px;
-        }
-        
-        .nav-links i {
-            margin-right: 12px;
-            width: 20px;
-            text-align: center;
-        }
-        
-        /* Main Content */
-        .main-content {
-            padding: 15px;
-            max-width: 100%;
-            overflow-x: hidden;
-        }
-        
-        /* PDF Section - Mobile Optimized */
-        .pdf-mobile-section {
-            background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            margin-bottom: 20px;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
-        }
-        
-        .pdf-mobile-header {
-            background: linear-gradient(to right, #1a4c8c, #0a2c5e);
-            color: white;
-            padding: 15px;
-        }
-        
-        .pdf-title {
-            display: flex;
-            align-items: center;
-            font-size: 16px;
-            font-weight: 600;
-            margin-bottom: 10px;
-        }
-        
-        .pdf-title i {
-            margin-right: 10px;
-            font-size: 18px;
-        }
-        
-        .pdf-mobile-controls {
-            display: flex;
-            gap: 8px;
-            flex-wrap: wrap;
-        }
-        
-        .pdf-mobile-btn {
-            flex: 1;
-            min-width: 120px;
-            background: rgba(255, 255, 255, 0.15);
-            border: none;
-            color: white;
-            padding: 10px 15px;
-            border-radius: 8px;
-            font-size: 14px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            cursor: pointer;
-            transition: all 0.2s ease;
-        }
-        
-        .pdf-mobile-btn:active {
-            transform: scale(0.98);
-            background: rgba(255, 255, 255, 0.25);
-        }
-        
-        .pdf-mobile-viewer {
-            width: 100%;
-            height: 500px;
-            border: none;
-            display: block;
-        }
-        
-        /* Website Content */
-        .website-content {
-            background: white;
-            border-radius: 12px;
-            padding: 20px 15px;
-            margin-bottom: 20px;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
-        }
-        
-        .mobile-banner {
-            background: linear-gradient(135deg, #1a4c8c, #0a2c5e);
-            color: white;
+            background-color: #f5f5f5;
+            line-height: 1.6;
             padding: 20px;
-            border-radius: 10px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        
+        .header {
             text-align: center;
+            padding: 20px 0;
+            border-bottom: 2px solid #ccc;
             margin-bottom: 20px;
         }
         
-        .mobile-banner h2 {
-            font-size: 22px;
-            margin-bottom: 10px;
-            line-height: 1.3;
-        }
-        
-        .mobile-banner p {
-            font-size: 15px;
-            margin-bottom: 15px;
-            opacity: 0.9;
-        }
-        
-        .mobile-cta {
-            display: inline-block;
-            background: #e63946;
-            color: white;
-            padding: 12px 25px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 16px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transition: all 0.2s ease;
-        }
-        
-        .mobile-cta:active {
-            transform: scale(0.98);
-            background: #c1121f;
-        }
-        
-        /* Section Titles */
-        .section-title {
-            color: #1a4c8c;
-            font-size: 20px;
-            margin: 25px 0 15px 0;
-            padding-left: 10px;
-            border-left: 4px solid #e63946;
-            line-height: 1.3;
-        }
-        
-        /* Mobile Tables */
-        .mobile-table-container {
-            width: 100%;
-            overflow-x: auto;
-            -webkit-overflow-scrolling: touch;
-            margin: 15px 0;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-        }
-        
-        .mobile-table {
-            width: 100%;
-            min-width: 500px;
-            border-collapse: collapse;
-        }
-        
-        .mobile-table th {
-            background: #1a4c8c;
-            color: white;
-            padding: 12px 10px;
+        .date-time {
+            text-align: right;
             font-size: 14px;
-            font-weight: 600;
+            color: #666;
+            margin-bottom: 10px;
+        }
+        
+        h1 {
+            color: #1a4c8c;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        
+        h2 {
+            color: #1a4c8c;
+            font-size: 22px;
+            margin: 25px 0 15px 0;
+            border-left: 4px solid #e63946;
+            padding-left: 10px;
+        }
+        
+        h3 {
+            color: #1a4c8c;
+            font-size: 18px;
+            margin: 20px 0 10px 0;
+        }
+        
+        p {
+            margin-bottom: 15px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        
+        th {
+            background-color: #f2f2f2;
+            padding: 10px;
             text-align: left;
         }
         
-        .mobile-table td {
-            padding: 12px 10px;
-            border-bottom: 1px solid #eee;
-            font-size: 14px;
+        td {
+            padding: 8px 10px;
         }
         
-        .mobile-table tr:nth-child(even) {
-            background: #f9f9f9;
+        .cta-button {
+            display: inline-block;
+            background-color: #e63946;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 4px;
+            margin: 15px 0;
         }
         
-        /* Quick Info Cards */
-        .info-cards-mobile {
-            margin: 20px 0;
+        .cta-button:hover {
+            background-color: #c1121f;
         }
         
-        .info-card-mobile {
-            background: #f8f9fa;
-            border-radius: 10px;
+        .page-break {
+            page-break-before: always;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px dashed #ccc;
+        }
+        
+        .page-number {
+            position: absolute;
+            bottom: 10px;
+            right: 20px;
+            font-size: 12px;
+            color: #666;
+        }
+        
+        .faq-item {
+            margin-bottom: 20px;
             padding: 15px;
-            margin-bottom: 15px;
-            border-left: 4px solid #1a4c8c;
+            background-color: #f9f9f9;
+            border-left: 3px solid #1a4c8c;
         }
         
-        .info-card-mobile h3 {
+        .faq-question {
+            font-weight: bold;
             color: #1a4c8c;
-            font-size: 16px;
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        
-        .info-card-mobile p {
-            font-size: 14px;
             margin-bottom: 8px;
         }
         
-        .info-card-mobile strong {
-            color: #333;
-        }
-        
-        /* Mobile Lists */
-        .mobile-list {
-            list-style: none;
-            padding: 0;
-        }
-        
-        .mobile-list li {
-            padding: 12px 0;
-            border-bottom: 1px solid #eee;
-        }
-        
-        .mobile-list a {
-            color: #333;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 15px;
-            transition: color 0.2s ease;
-        }
-        
-        .mobile-list a:active {
-            color: #1a4c8c;
-        }
-        
-        /* Modals - Mobile Optimized */
-        .mobile-modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.9);
-            z-index: 2000;
-            overflow-y: auto;
-            -webkit-overflow-scrolling: touch;
-        }
-        
-        .mobile-modal-content {
-            background: white;
-            margin: 20px;
-            border-radius: 12px;
-            padding: 20px;
-            max-width: 500px;
-            position: relative;
-            animation: modalSlideUp 0.3s ease;
-        }
-        
-        @keyframes modalSlideUp {
-            from {
-                transform: translateY(50px);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-        
-        .modal-close-btn {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            background: none;
-            border: none;
-            font-size: 24px;
-            color: #666;
-            cursor: pointer;
-            width: 30px;
-            height: 30px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-        }
-        
-        .modal-close-btn:active {
-            background: #f0f0f0;
-        }
-        
-        .modal-title {
-            color: #1a4c8c;
-            font-size: 20px;
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .modal-options {
-            margin: 20px 0;
-        }
-        
-        .modal-option {
-            display: block;
-            width: 100%;
-            background: #f0f8ff;
-            border: none;
-            padding: 15px;
-            border-radius: 8px;
-            margin-bottom: 10px;
-            text-align: left;
-            font-size: 15px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            cursor: pointer;
-            transition: all 0.2s ease;
-        }
-        
-        .modal-option:active {
-            transform: scale(0.98);
-            background: #e1f0ff;
-        }
-        
-        /* Footer - Mobile */
-        .mobile-footer {
-            background: #212529;
-            color: white;
-            padding: 30px 15px 20px;
-            margin-top: 30px;
-        }
-        
-        .footer-section {
-            margin-bottom: 25px;
-        }
-        
-        .footer-section h3 {
-            color: #ffcc00;
-            font-size: 18px;
-            margin-bottom: 15px;
-        }
-        
-        .footer-links {
-            list-style: none;
-            padding: 0;
-        }
-        
-        .footer-links li {
-            margin-bottom: 10px;
-        }
-        
-        .footer-links a {
-            color: #ddd;
-            text-decoration: none;
-            font-size: 14px;
-            transition: color 0.2s ease;
-        }
-        
-        .footer-links a:active {
-            color: white;
-        }
-        
-        .footer-copyright {
-            text-align: center;
+        .footer {
+            margin-top: 40px;
             padding-top: 20px;
-            border-top: 1px solid #444;
-            color: #aaa;
-            font-size: 13px;
-            line-height: 1.5;
-        }
-        
-        /* Touch-Friendly Elements */
-        button, a {
-            touch-action: manipulation;
-        }
-        
-        /* Loading State */
-        .loading {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 40px;
-            font-size: 16px;
+            border-top: 1px solid #ccc;
+            font-size: 14px;
             color: #666;
-        }
-        
-        /* Utility Classes */
-        .text-center {
-            text-align: center;
-        }
-        
-        .mb-20 {
-            margin-bottom: 20px;
-        }
-        
-        .mt-20 {
-            margin-top: 20px;
-        }
-        
-        /* Responsive Adjustments */
-        @media (max-width: 360px) {
-            html {
-                font-size: 14px;
-            }
-            
-            .pdf-mobile-btn {
-                min-width: 100%;
-                margin-bottom: 5px;
-            }
-            
-            .mobile-banner h2 {
-                font-size: 20px;
-            }
-        }
-        
-        @media (min-width: 768px) {
-            .container {
-                max-width: 750px;
-                padding: 0 15px;
-            }
-            
-            .main-content {
-                padding: 20px 0;
-            }
-            
-            .pdf-mobile-viewer {
-                height: 600px;
-            }
-            
-            .mobile-modal-content {
-                margin: 40px auto;
-            }
-        }
-        
-        @media (min-width: 992px) {
-            .container {
-                max-width: 970px;
-            }
-            
-            .pdf-mobile-viewer {
-                height: 700px;
-            }
-        }
-        
-        @media (min-width: 1200px) {
-            .container {
-                max-width: 1170px;
-            }
-        }
-        
-        /* Print Styles */
-        @media print {
-            .mobile-header,
-            .pdf-mobile-controls,
-            .mobile-cta,
-            .mobile-footer {
-                display: none !important;
-            }
-            
-            body {
-                background: white;
-                font-size: 12pt;
-            }
-            
-            .container {
-                max-width: 100%;
-                padding: 0;
-            }
-            
-            .main-content {
-                padding: 0;
-            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- Mobile Header -->
-        <header class="mobile-header">
-            <div class="header-top">
-                <div class="logo-container">
-                    <i class="fas fa-warehouse logo-icon"></i>
-                    <div class="logo-text">
-                        <h1>FCI Recruitment 2026</h1>
-                        <span>Food Corporation of India</span>
-                    </div>
-                </div>
-                <div class="mobile-date">
-                    <i class="far fa-calendar-alt"></i> 03/02/2026
-                </div>
-                <button class="menu-toggle" onclick="toggleMenu()">
-                    <i class="fas fa-bars"></i>
-                </button>
+        <!-- Page 1 -->
+        <div class="date-time">03/02/2026, 11:23</div>
+        
+        <div class="header">
+            <h1>FCI Recruitment 2026 Notification, Eligibility, 33566 Vacancies</h1>
+            <p>Home FCI Recruitment 2026</p>
+        </div>
+        
+        <h3>Table Of Contents</h3>
+        <p>The Food Corporation of India (FCI) conducts the FCI Exams to recruit eligible candidates for various categories [Category 1, 2, 3, and 4]. FCI is one of the largest Public Sector undertakings that deals with food grain and supply chain management. Established on 14th January 1965 with its first district office in Thanjavur, Tamil Nadu, the FCI has been managing various depots and private equity godowns all across the country. Go through the article to know the eligibility criteria, selection process, salary, exam pattern, and more details about the exam. For the year 2026, FCI Recruitment 2026 Notification PDF is expected to be released for 33566 or more vacancies.</p>
+        
+        <h2>FCI Recruitment 2026 Notification</h2>
+        <p>Food Corporation of India (FCI) will soon release the official notification PDF for Categories 1, 2, 3, and 4 on its official website https://fci.gov.in/. A detailed advertisement for the FCI Vacancy 2026 will also be released on the official website with complete details regarding vacancies, eligibility, selection process, application form, etc. Candidates waiting for the FCI Recruitment 2026 Notification, read this article to check all the details.</p>
+        
+        <h2>FCI Recruitment 2026-Overview</h2>
+        <p>Know some important details about FCI Recruitment 2026 to be conducted by the Food Corporation of India from the table below. The details will be updated upon the release of the official notification pdf.</p>
+        
+        <table>
+            <tr><td colspan="2"><strong>FCI Recruitment 2026-Overview</strong></td></tr>
+            <tr><td><strong>Organisation</strong></td><td>Food Corporation of India</td></tr>
+            <tr><td><strong>Posts</strong></td><td>Category 1, 2, 3, 4</td></tr>
+            <tr><td><strong>Vacancies</strong></td><td>33566 (Category 2 &amp; 3)</td></tr>
+            <tr><td><strong>Mode of Application</strong></td><td>Online</td></tr>
+            <tr><td><strong>Apply Online Dates</strong></td><td>--</td></tr>
+            <tr><td><strong>Selection Process</strong></td><td>Online Test, Interview</td></tr>
+        </table>
+        
+        <!-- Page 2 -->
+        <div class="page-break">
+            <div class="date-time">03/02/2026, 11:23</div>
+            
+            <h2>FCI Recruitment 2026- Important Dates</h2>
+            <p>Food Corporation of India (FCI) will release the FCI Recruitment 2026 Notification at the official website https://fci.gov.in/. The apply online will begin after the release of the official notification pdf. The important dates for FCI Recruitment Exam will be tabulated below as soon as announced officially.</p>
+            
+            <table>
+                <tr><th>Events</th><th>Important Dates</th></tr>
+                <tr><td>Notification Release Date</td><td>--</td></tr>
+                <tr><td>Apply Online Starts</td><td>--</td></tr>
+                <tr><td>Last Date To Apply Online</td><td>--</td></tr>
+                <tr><td>Last date for submission of application fee</td><td>--</td></tr>
+                <tr><td>Availability of FCI Admit Card 2026</td><td>--</td></tr>
+                <tr><td>FCI Exam Date 2026</td><td>--</td></tr>
+            </table>
+            
+            <div style="text-align: center; margin: 20px 0; padding: 15px; background-color: #f0f0f0;">
+                <p>[Image placeholder: 69, 532, 928, 780]</p>
             </div>
             
-            <!-- Mobile Navigation Menu -->
-            <nav class="mobile-nav" id="mobileNav">
-                <ul class="nav-links">
-                    <li><a href="#" onclick="scrollToTop()"><i class="fas fa-home"></i> Home</a></li>
-                    <li><a href="#pdf-viewer"><i class="fas fa-file-pdf"></i> View PDF</a></li>
-                    <li><a href="#" onclick="downloadPDF()"><i class="fas fa-download"></i> Download</a></li>
-                    <li><a href="#" onclick="showQuickInfo()"><i class="fas fa-info-circle"></i> Quick Info</a></li>
-                    <li><a href="#" onclick="showStudyMaterials()"><i class="fas fa-book"></i> Study Materials</a></li>
-                    <li><a href="#" onclick="openOfficialSite()"><i class="fas fa-external-link-alt"></i> Official Site</a></li>
-                </ul>
-            </nav>
-        </header>
-
-        <!-- Main Content -->
-        <main class="main-content">
-            <!-- PDF Viewer Section -->
-            <section id="pdf-viewer" class="pdf-mobile-section">
-                <div class="pdf-mobile-header">
-                    <div class="pdf-title">
-                        <i class="fas fa-file-pdf"></i>
-                        <span>FCI Recruitment 2026 Notification PDF</span>
-                    </div>
-                    <div class="pdf-mobile-controls">
-                        <button class="pdf-mobile-btn" onclick="viewFullPDF()">
-                            <i class="fas fa-expand"></i> Full View
-                        </button>
-                        <button class="pdf-mobile-btn" onclick="downloadPDF()">
-                            <i class="fas fa-download"></i> Download
-                        </button>
-                        <button class="pdf-mobile-btn" onclick="printPDF()">
-                            <i class="fas fa-print"></i> Print
-                        </button>
-                    </div>
-                </div>
-                <iframe 
-                    class="pdf-mobile-viewer" 
-                    src="https://docs.google.com/viewer?url=https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf&embedded=true"
-                    title="FCI Recruitment 2026 PDF"
-                    loading="lazy">
-                </iframe>
-            </section>
-
-            <!-- Website Content -->
-            <section class="website-content">
-                <div class="mobile-banner">
-                    <h2>FCI Recruitment 2026 Notification</h2>
-                    <p>33566 Vacancies for Category 1, 2, 3, and 4 Posts</p>
-                    <a href="#" class="mobile-cta" onclick="showStudyMaterials()">
-                        <i class="fas fa-graduation-cap"></i> Get Free Study Materials
-                    </a>
-                </div>
-
-                <h2 class="section-title">Overview</h2>
-                <p>The Food Corporation of India (FCI) conducts the FCI Exams to recruit eligible candidates for various categories [Category 1, 2, 3, and 4]. FCI is one of the largest Public Sector undertakings that deals with food grain and supply chain management.</p>
-                
-                <div class="info-cards-mobile">
-                    <div class="info-card-mobile">
-                        <h3><i class="fas fa-info-circle"></i> Quick Summary</h3>
-                        <p><strong>Organization:</strong> Food Corporation of India (FCI)</p>
-                        <p><strong>Total Vacancies:</strong> 33,566</p>
-                        <p><strong>Application Mode:</strong> Online</p>
-                        <p><strong>Official Website:</strong> fci.gov.in</p>
-                    </div>
-                </div>
-
-                <h2 class="section-title">Important Dates</h2>
-                <div class="mobile-table-container">
-                    <table class="mobile-table">
-                        <tr>
-                            <th>Events</th>
-                            <th>Dates</th>
-                        </tr>
-                        <tr>
-                            <td>Notification Release</td>
-                            <td>To be notified</td>
-                        </tr>
-                        <tr>
-                            <td>Apply Online Starts</td>
-                            <td>To be notified</td>
-                        </tr>
-                        <tr>
-                            <td>Last Date to Apply</td>
-                            <td>To be notified</td>
-                        </tr>
-                        <tr>
-                            <td>Exam Date</td>
-                            <td>To be notified</td>
-                        </tr>
-                    </table>
-                </div>
-
-                <h2 class="section-title mt-20">Quick Links</h2>
-                <ul class="mobile-list">
-                    <li><a href="#" onclick="showVacancyDetails()"><i class="fas fa-list-ol"></i> Vacancy Details</a></li>
-                    <li><a href="#" onclick="showEligibility()"><i class="fas fa-user-check"></i> Eligibility Criteria</a></li>
-                    <li><a href="#" onclick="showExamPattern()"><i class="fas fa-clipboard-list"></i> Exam Pattern</a></li>
-                    <li><a href="#" onclick="showSalary()"><i class="fas fa-money-bill-wave"></i> Salary Details</a></li>
-                    <li><a href="#" onclick="downloadPDF()"><i class="fas fa-file-pdf"></i> Download Notification</a></li>
-                </ul>
-            </section>
-
-            <!-- Additional Info Cards -->
-            <div class="info-cards-mobile">
-                <div class="info-card-mobile">
-                    <h3><i class="fas fa-download"></i> Download Options</h3>
-                    <p>Get all important documents in PDF format:</p>
-                    <div style="display: flex; gap: 10px; margin-top: 10px; flex-wrap: wrap;">
-                        <button class="pdf-mobile-btn" onclick="downloadFullPDF()" style="background: #1a4c8c; color: white;">
-                            Full Notification
-                        </button>
-                        <button class="pdf-mobile-btn" onclick="downloadSyllabus()" style="background: #e63946; color: white;">
-                            Syllabus
-                        </button>
-                        <button class="pdf-mobile-btn" onclick="downloadForm()" style="background: #28a745; color: white;">
-                            Application Form
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </main>
-
-        <!-- Mobile Footer -->
-        <footer class="mobile-footer">
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul class="footer-links">
-                    <li><a href="#" onclick="scrollToTop()">Home</a></li>
-                    <li><a href="#pdf-viewer">View PDF</a></li>
-                    <li><a href="#" onclick="downloadPDF()">Download</a></li>
-                    <li><a href="#" onclick="showStudyMaterials()">Study Materials</a></li>
-                </ul>
+            <h2>FCI Vacancy 2026</h2>
+            <p>Food Corporation of India (FCI) has announced 33566 vacancies for various posts under Category 2 and 3 posts for the year 2026. The candidates can check the tentative vacancies released by FCI and the final vacancies will be released with the official notification.</p>
+        </div>
+        
+        <!-- Page 3 -->
+        <div class="page-break">
+            <div class="date-time">03/02/2026, 11:23</div>
+            <h2>FCI Recruitment 2026 Notification, Eligibility, 33566 Vacancies</h2>
+            
+            <table>
+                <tr><td>Manager(Depot)</td><td>2562</td><td>2729</td><td>1711</td><td>4526</td><td>2922</td><td>7715</td><td>4336</td><td>7015</td><td>-</td><td>1579</td><td>5699</td><td>9615</td><td>5713</td><td>9915</td><td>8</td></tr>
+                <tr><td>Manager(QC)</td><td>2031</td><td>949</td><td>1651</td><td>5312</td><td>2502</td><td>4644</td><td>5411</td><td>5123</td><td>5815</td><td>5625</td><td>1259</td><td>1205</td><td>54</td></tr>
+                <tr><td>Manager(Movt)</td><td>685</td><td>810</td><td>805</td><td>624</td><td>1099</td><td>8112</td><td>8171</td><td>1515</td><td>-</td><td>1024</td><td>3213</td><td>3053</td><td>3457</td><td>76</td></tr>
+                <tr><td>Manager(Hindi)</td><td>42</td><td>24</td><td>40</td><td>54</td><td>1550</td><td>2208</td><td>7128</td><td>244</td></tr>
+                <tr><td>TOTAL</td><td>8427</td><td>5488</td><td>9067</td><td>8212</td><td>4114</td><td>11067</td><td>7437</td><td>7309</td><td>6828</td><td>6276</td><td>1025</td><td>12229</td><td>22206</td><td>6454</td><td>8058</td><td>4</td></tr>
+                <tr><td>ENGG, CADRE</td></tr>
+                <tr><td>Manager(Civil)</td><td>1129</td><td>1679</td><td>1512</td><td>3117</td><td>4725</td><td>3015</td><td>1590</td><td>4545</td></tr>
+                <tr><td>Manager(E/M)</td><td>5148</td><td>3595</td><td>4743</td><td>4221</td><td>9172</td><td>5232</td><td>20</td></tr>
+                <tr><td>TOTAL</td><td>16313</td><td>2410</td><td>1424</td><td>1771</td><td>8117</td><td>1147</td><td>4932</td><td>1714</td><td>2776</td><td>5</td></tr>
+                <tr><td>TOTAL</td><td>8587</td><td>5710</td><td>1930</td><td>7921</td><td>3811</td><td>6510</td><td>8481</td><td>3953</td><td>2075</td><td>2972</td><td>8017</td><td>2561</td><td>2324</td><td>2376</td><td>2065</td><td>5576</td><td>49</td></tr>
+                <tr><td>CAT.II</td></tr>
+            </table>
+            
+            <table>
+                <tr><td rowspan="2">CATEGORY-B</td><td colspan="3">POSTWISE ZONEWISE CATEGORY-III AS ON 30.06.2024</td><td colspan="3"></td><td colspan="3"></td><td colspan="3"></td><td colspan="3"></td></tr>
+            </table>
+        </div>
+        
+        <!-- Page 4 -->
+        <div class="page-break">
+            <div style="text-align: right; font-size: 12px; margin-bottom: 10px;">1</div>
+            
+            <h2>FCI Recruitment 2026 Apply Online</h2>
+            <p>The Online Application Dates will be announced through the FCI Recruitment 2026 Notification. The eligible candidates will be applied online at https://fci.gov.in/ within the duration notified by FCI. To know the complete procedure for FCI Apply Online 2026, click on the below link and read all about FCI Exam Apply Online.</p>
+            <p><strong>FCI Recruitment 2026 Apply Online Details- Click to Check</strong></p>
+            
+            <h2>FCI Recruitment 2026 Application Fee</h2>
+            <p>Candidates except as specified above, applying for the post (anyone within the zone) are required to submit an Application Fee of Rs. 800/- (Excluding bank charges but including G S T) by using Debit Cards (RuPay/Visa/MasterCard/Maestro), Credit Cards, Internet Banking, IMPS, Cash Cards/ Mobile Wallets, UPI by providing information as asked on the screen. SC/ST/PwBD and Women candidates are exempted from payment of the application Fee.</p>
+            
+            <table>
+                <tr><th>Categories</th><th>Fee</th></tr>
+                <tr><td>UR / OBC / EWS</td><td>Rs. 800/-</td></tr>
+                <tr><td>SC / ST / PWD / Female</td><td>Nil</td></tr>
+            </table>
+            
+            <h2>FCI Recruitment 2026 Eligibility Criteria</h2>
+            <p>The detailed eligibility criteria for various vacancies have been released along with the FCI notification PDF. The expected eligibility is as such.</p>
+            
+            <h2>FCI Educational Qualification</h2>
+            
+            <table>
+                <tr><td colspan="2"><strong>FCI Educational Qualification</strong></td></tr>
+                <tr><td><strong>Post</strong></td><td><strong>Education Qualification</strong></td></tr>
+                <tr><td>Manager (General)</td><td>The candidates must be a Graduate degree or equivalent from a recognized university with 60% marks or CA/ICWA/CS</td></tr>
+                <tr><td>Manager (Depot)</td><td>The candidates must be a Graduate degree or equivalent from a recognized university with 60% marks or CA/ICWA/CS</td></tr>
+            </table>
+        </div>
+        
+        <!-- Page 5 -->
+        <div class="page-break">
+            <div class="date-time">03/02/2026, 11:23</div>
+         
+            <table>
+                <tr><td>Manager (Accounts)</td><td>The Institute of Company Secretaries of India<br>OR<br>B.Com from a recognized University AND<br>(a) Post Graduate Full-time MBA (Fin) Degree / Diploma of minimum 2 years</td></tr>
+                <tr><td>Manager (Technical)</td><td>B.Sc. in Agriculture from a recognized University.<br>OR<br>B.Tech degree or B.E degree in Food Science from a recognized University</td></tr>
+                <tr><td>Manager (Civil Engineer)</td><td>Degree in Civil Engineering from a recognized University or equivalent</td></tr>
+                <tr><td>Manager (Electrical Mechanical Engineer)</td><td>Degree in Electrical Engineering or Mechanical Engineering from a recognized University</td></tr>
+                <tr><td>Manager (Hindi)</td><td>Master's Degree of a recognized University or equivalent in Hindi AND<br>5 years experience of terminological work in Hindi and/or translation of administrative, commercial, scientific literature</td></tr>
+            </table>
+            
+            <h2>FCI Age Limit</h2>
+            <p>The upper age for FCI Manager should be 28 years and for Manager (Hindi) is 35 years.</p>
+            
+            <table>
+                <tr><td colspan="2"><strong>FCI Age Limit</strong></td></tr>
+                <tr><td><strong>Category</strong></td><td><strong>Upper Age Limit</strong></td></tr>
+                <tr><td>Manager</td><td>28 years</td></tr>
+                <tr><td>Manager (Hindi)</td><td>35 years</td></tr>
+            </table>
+            
+            <table>
+                <tr><td colspan="2"><strong>Age Relaxation</strong></td></tr>
+                <tr><td>OBC</td><td>3 years</td></tr>
+                <tr><td>SC / ST</td><td>5 years</td></tr>
+                <tr><td>Departmental (FCI) employees</td><td>Up to 50 years</td></tr>
+                <tr><td>PWD-General</td><td>10 years</td></tr>
+                <tr><td>PWD-OBC</td><td>13 years</td></tr>
+                <tr><td>PWD-SC / ST</td><td>15 years</td></tr>
+            </table>
+        </div>
+        
+        <!-- Page 6 -->
+        <div class="page-break">
+            <div style="margin-bottom: 20px;">
+                <p>1. In Phase-I, the test will be Objective type (Multiple Choice Questions).</p>
+                <p>2. Each question will carry an equal 1 (one) mark.</p>
+                <p>3. For each wrong answer, there will be a negative marking of one-fourth (1/4) of the mark assigned to that question.</p>
+                <p>4. If a question is left blank, i.e. no answer is marked by the candidate; there will be no negative marking for that question.</p>
+                <p>5. The marks obtained in Phase-I will NOT be reckoned in the final merit ranking</p>
             </div>
             
-            <div class="footer-section">
-                <h3>Contact Info</h3>
-                <ul class="footer-links">
-                    <li>Food Corporation of India</li>
-                    <li>Website: fci.gov.in</li>
-                    <li>Email: recruitment@fci.gov.in</li>
-                    <li>Helpline: 1800-XXX-XXXX</li>
-                </ul>
+            <div style="text-align: center; background-color: #f0f8ff; padding: 15px; margin: 20px 0; border: 1px solid #1a4c8c;">
+                <h3>Get Free Study Materials & Mock Tests</h3>
             </div>
             
-            <div class="footer-copyright">
-                <p>&copy; 2026 FCI Recruitment Portal</p>
-                <p>Official notification at https://fci.gov.in/</p>
-                <p style="margin-top: 10px; font-size: 12px;">Mobile Optimized Version</p>
-            </div>
-        </footer>
-    </div>
-
-    <!-- Download Modal -->
-    <div id="downloadModal" class="mobile-modal">
-        <div class="mobile-modal-content">
-            <button class="modal-close-btn" onclick="closeModal('downloadModal')">&times;</button>
-            <h3 class="modal-title"><i class="fas fa-download"></i> Download PDF</h3>
-            <p>Select which document you want to download:</p>
+            <table>
+                <tr><td colspan="4"><strong>FCI Recruitment 2026 Phase 1 Exam Pattern</strong></td></tr>
+                <tr><th>Section</th><th>No. of Questions</th><th>Max. Marks</th><th>Time Duration</th></tr>
+                <tr><td>English Language</td><td>25</td><td>25</td><td>15 minutes</td></tr>
+                <tr><td>Reasoning Ability</td><td>25</td><td>25</td><td>15 minutes</td></tr>
+                <tr><td>Numerical Aptitude</td><td>25</td><td>25</td><td>15 minutes</td></tr>
+                <tr><td>General Studies</td><td>25</td><td>25</td><td>15 minutes</td></tr>
+                <tr><td><strong>Total</strong></td><td><strong>100</strong></td><td><strong>100</strong></td><td><strong>60 minutes</strong></td></tr>
+            </table>
             
-            <div class="modal-options">
-                <button class="modal-option" onclick="downloadFile('full')">
-                    <i class="fas fa-file-pdf" style="color: #1a4c8c;"></i>
-                    <div>
-                        <strong>Full Notification</strong>
-                        <small style="display: block; color: #666;">Complete 2026 recruitment details</small>
-                    </div>
-                </button>
-                
-                <button class="modal-option" onclick="downloadFile('syllabus')">
-                    <i class="fas fa-book" style="color: #e63946;"></i>
-                    <div>
-                        <strong>Syllabus PDF</strong>
-                        <small style="display: block; color: #666;">Complete exam syllabus</small>
-                    </div>
-                </button>
-                
-                <button class="modal-option" onclick="downloadFile('application')">
-                    <i class="fas fa-file-alt" style="color: #28a745;"></i>
-                    <div>
-                        <strong>Application Form</strong>
-                        <small style="display: block; color: #666;">Online application form</small>
-                    </div>
-                </button>
-            </div>
+            <p><strong>Note-</strong> General Studies* comprising of Indian History, Indian Economy, Geography & General Science up to Class 8th level - 20 questions Current Affairs - 5 questions</p>
+            <p><strong>FCI Manager Exam Pattern 2026 (Grade 2)- Click Here</strong></p>
             
-            <p style="font-size: 13px; color: #666; margin-top: 15px;">
-                <i class="fas fa-info-circle"></i> Note: Official PDFs will be available after notification release.
-            </p>
+            <h2>FCI Recruitment 2026 Syllabus</h2>
+            <p>To secure good marks in the online examination, the candidates must be aware of the detailed FCI Syllabus for each subject included in the exam pattern. The phase 1 online exam consists of 4 subjects- English Language, Reasoning Ability, Numerical Aptitude, and General Studies</p>
+        </div>
+        
+        <!-- Page 7 -->
+        <div class="page-break">
+            <p>5. Vocabulary based questions 6. One word substitution 7. Jumbled Paragraph/Sentences 8. Paragraph Fillers 9. Paragraph Conclusion 10. Paragraph/Sentences Restatement</p>
+            
+            <table>
+                <tr><td><strong>English Language</strong></td><td>5. Vocabulary based questions<br>6. One word substitution<br>7. Jumbled Paragraph/Sentences<br>8. Paragraph Fillers<br>9. Paragraph Conclusion<br>10. Paragraph/Sentences Restatement</td></tr>
+                <tr><td><strong>Reasoning Ability</strong></td><td>1. Puzzles, Seating Arrangements<br>2. Direction Sense<br>3. Blood Relation<br>4. Syllogism<br>5. Order and Ranking<br>6. Coding-Decoding<br>7. Machine Input-Output<br>8. Inequalities<br>9. Alpha-Numeric-Symbol Series<br>10. Data Sufficiency<br>11. Logical Reasoning<br>12. Passage Inference<br>13. Statement and Assumption<br>14. Conclusion</td></tr>
+                <tr><td><strong>Numerical Ability</strong></td><td>1. Data Interpretation<br>2. Inequalities (Quadratic Equations)<br>3. Number Series<br>4. Approximation and Simplification<br>5. Data Sufficiency<br>6. Miscellaneous Arithmetic Problems<br>7. HCF and LCM<br>8. Profit and Loss<br>9. SI & CI<br>10. Problem on Ages<br>11. Work and Time<br>12. Speed Distance and Time<br>13. Probability<br>14. Mensuration<br>15. Permutation and Combination<br>16. Average<br>17. Ratio and Proportion<br>18. Partnership<br>19. Problems on Boats and Stream</td></tr>
+            </table>
+        </div>
+        
+        <!-- Page 8 -->
+        <div class="page-break">
+            <p>3. History - India & World.</p>
+            <p>4. Indian Polity. - Science & Technology.</p>
+            <p>5. Indian Constitution.</p>
+            <p>6. Indian Economy.</p>
+            <p>7. Environmental Issues</p>
+            
+            <p><strong>FCI Manager Syllabus 2026 (Grade 2)- Click to Check</strong></p>
+            <p><strong>FCI Assistant Grade 3 Syllabus 2026- Click to Check</strong></p>
+            
+            <h2>FCI Recruitment 2026 Salary</h2>
+            <p>Food Corporation of India offers a lucrative salary package to candidates shortlisted for the post of FCI Manager. The managers will draw a starting basic pay of Rs. 40,000/- p.m. (for a training period of 6 months) applicable to Officers in category II and they will be eligible for Dearness Allowance, House Keep Up Allowance, House Rent Allowance, and Grade Allowance. At present, the initial monthly Gross emoluments are approximately Rs. 71,000 p.m.</p>
+            <p><strong>FCI Salary Structure 2026 - Click to Check</strong></p>
+            
+            <h2>FCI Recruitment 2026 Cut Off</h2>
+            <p>FCI releases the FCI Cut- Off & Score Card post the declaration of its result. Candidates can check the cut- off by clicking on the link mentioned below. The FCI Manager Cut- Off and Score Card will help candidates analyze their scores and compare them with the scores of other candidates.</p>
+            
+            <table>
+                <tr><td colspan="2"><strong>FCI Manager Cut Off 2018-Phase 1</strong></td></tr>
+                <tr><td><strong>Category</strong></td><td><strong>FCI Cut Off</strong></td></tr>
+                <tr><td>General</td><td>75</td></tr>
+                <tr><td>OBC</td><td>72</td></tr>
+                <tr><td>SC</td><td>65</td></tr>
+                <tr><td>ST</td><td>62</td></tr>
+            </table>
+        </div>
+        
+        <!-- Page 9 -->
+        <div class="page-break">
+            <div style="text-align: center; background-color: #f0f8ff; padding: 15px; margin: 20px 0; border: 1px solid #1a4c8c;">
+            
+            <h3>Trending Articles:</h3>
+            <ul style="margin-left: 20px; margin-bottom: 20px;">
+                <li>RBI Office Attendant Recruitment 2026 for 572 Vacancies</li>
+                <li>JAIIB Registration 2026 Starts, Apply Online Link</li>
+                <li>RRB Group D Notification 2026 Out (22000 Posts)</li>
+                <li>KVS NVS Answer Key 2026 Download Link</li>
+                <li>EMRS Result 2026 Link (Tier 1)</li>
+                <li>SSC MTS Admit Card 2026 Download Link</li>
+                <li>CTET Admit Card Download 2026 Link</li>
+                <li>SSC CHSL Result 2025 & Merit List PDF</li>
+                <li>SBI Clerk Mains Result 2025 Link</li>
+            </ul>
+            
+        
+        <div class="footer">
+            <p>This website contains the exact same content as the FCI Recruitment 2026 Notification PDF.</p>
+            <a href="https://fci.gov.in/">Visit FCI Official Website</a>
         </div>
     </div>
+</body>
 
-    <!-- Study Materials Modal -->
-    <div id="studyModal" class="mobile-modal">
-        <div class="mobile-modal-content">
-            <button class="modal-close-btn" onclick="closeModal('studyModal')">&times;</button>
-            <h3 class="modal-title"><i class="fas fa-graduation-cap"></i> Free Study Materials</h3>
             
-            <div class="modal-options">
-                <button class="modal-option" onclick="downloadStudy('papers')">
-                    <i class="fas fa-file-pdf" style="color: #1a4c8c;"></i>
-                    <div>
-                        <strong>Previous Year Papers</strong>
-                        <small style="display: block; color: #666;">2018-2024 solved papers</small>
-                    </div>
-                </button>
-                
-                <button class="modal-option" onclick="downloadStudy('guide')">
-                    <i class="fas fa-book-open" style="color: #e63946;"></i>
-                    <div>
-                        <strong>Complete Study Guide</strong>
-                        <small style="display: block; color: #666;">All subjects covered</small>
-                    </div>
-                </button>
-                
-                <button class="modal-option" onclick="openMockTests()">
-                    <i class="fas fa-chart-line" style="color: #28a745;"></i>
-                    <div>
-                        <strong>Mock Test Series</strong>
-                        <small style="display: block; color: #666;">Practice with analysis</small>
-                    </div>
-                </button>
-            </div>
-        </div>
-    </div>
+            <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+        iframe {
+            width: 100%;
+            height: 90vh;
+            border: 1px solid #ccc;
+        }
+        .download-btn {
+            display: inline-block;
+            margin-bottom: 15px;
+            padding: 10px 20px;
+            background: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .download-btn:hover {
+            background: #0056b3;
+        }
+    </style>
+<body>
 
-    <!-- Quick Info Modal -->
-    <div id="infoModal" class="mobile-modal">
-        <div class="mobile-modal-content">
-            <button class="modal-close-btn" onclick="closeModal('infoModal')">&times;</button>
-            <h3 class="modal-title"><i class="fas fa-info-circle"></i> Quick Information</h3>
-            
-            <div style="margin: 20px 0;">
-                <div style="background: #f0f8ff; padding: 15px; border-radius: 8px; margin-bottom: 10px;">
-                    <h4 style="color: #1a4c8c; margin-bottom: 10px;">Total Vacancies: 33,566</h4>
-                    <p style="font-size: 14px;">Category 2 & 3 posts across India</p>
-                </div>
-                
-                <div style="background: #f0f8ff; padding: 15px; border-radius: 8px; margin-bottom: 10px;">
-                    <h4 style="color: #1a4c8c; margin-bottom: 10px;">Salary Package</h4>
-                    <p style="font-size: 14px;">Starting: ₹40,000/month</p>
-                    <p style="font-size: 14px;">Gross: Approx. ₹71,000/month</p>
-                </div>
-                
-                <div style="background: #f0f8ff; padding: 15px; border-radius: 8px;">
-                    <h4 style="color: #1a4c8c; margin-bottom: 10px;">Application Fee</h4>
-                    <p style="font-size: 14px;">General/OBC: ₹800</p>
-                    <p style="font-size: 14px;">SC/ST/Women: No fee</p>
-                </div>
-            </div>
-        </div>
-    </div>
+    <h2>Result</h2>
 
-    <script>
-        // Mobile Menu Toggle
-        function toggleMenu() {
-            const nav = document.getElementById('mobileNav');
-            nav.classList.toggle('active');
-            
-            // Toggle menu icon
-            const menuIcon = document.querySelector('.menu-toggle i');
-            if (nav.classList.contains('active')) {
-                menuIcon.className = 'fas fa-times';
-            } else {
-                menuIcon.className = 'fas fa-bars';
-            }
-        }
-        
-        // Close menu when clicking outside
-        document.addEventListener('click', function(event) {
-            const nav = document.getElementById('mobileNav');
-            const menuToggle = document.querySelector('.menu-toggle');
-            
-            if (!nav.contains(event.target) && !menuToggle.contains(event.target)) {
-                nav.classList.remove('active');
-                const menuIcon = document.querySelector('.menu-toggle i');
-                menuIcon.className = 'fas fa-bars';
-            }
-        });
-        
-        // Modal Functions
-        function showModal(modalId) {
-            document.getElementById(modalId).style.display = 'block';
-            document.body.style.overflow = 'hidden';
-        }
-        
-        function closeModal(modalId) {
-            document.getElementById(modalId).style.display = 'none';
-            document.body.style.overflow = 'auto';
-        }
-        
-        // Close modals when clicking outside
-        document.querySelectorAll('.mobile-modal').forEach(modal => {
-            modal.addEventListener('click', function(event) {
-                if (event.target === this) {
-                    this.style.display = 'none';
-                    document.body.style.overflow = 'auto';
-                }
-            });
-        });
-        
-        // Download Functions
-        function downloadPDF() {
-            showModal('downloadModal');
-        }
-        
-        function downloadFile(type) {
-            let fileName = '';
-            
-            switch(type) {
-                case 'full':
-                    fileName = 'FCI_Recruitment_2026_Full_Notification.pdf';
-                    break;
-                case 'syllabus':
-                    fileName = 'FCI_2026_Exam_Syllabus.pdf';
-                    break;
-                case 'application':
-                    fileName = 'FCI_Application_Form_2026.pdf';
-                    break;
-            }
-            
-            // Create temporary download link
-            const link = document.createElement('a');
-            link.href = 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf';
-            link.download = fileName;
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-            
-            // Show success message
-            showToast(`Downloading ${fileName}...`);
-            closeModal('downloadModal');
-        }
-        
-        // Study Materials Functions
-        function showStudyMaterials() {
-            showModal('studyModal');
-        }
-        
-        function downloadStudy(type) {
-            let fileName = '';
-            
-            switch(type) {
-                case 'papers':
-                    fileName = 'FCI_Previous_Year_Papers.pdf';
-                    break;
-                case 'guide':
-                    fileName = 'FCI_Complete_Study_Guide.pdf';
-                    break;
-            }
-            
-            // Create temporary download link
-            const link = document.createElement('a');
-            link.href = 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf';
-            link.download = fileName;
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-            
-            showToast(`Downloading ${fileName}...`);
-        }
-        
-        function openMockTests() {
-            showToast('Opening mock test portal...');
-            setTimeout(() => {
-                window.open('https://fci.gov.in/', '_blank');
-            }, 500);
-            closeModal('studyModal');
-        }
-        
-        // Quick Info Functions
-        function showQuickInfo() {
-            showModal('infoModal');
-        }
-        
-        function showVacancyDetails() {
-            showToast('Showing vacancy details...');
-            // In a real app, this would navigate to the vacancies section
-        }
-        
-        function showEligibility() {
-            showToast('Showing eligibility criteria...');
-        }
-        
-        function showExamPattern() {
-            showToast('Showing exam pattern...');
-        }
-        
-        function showSalary() {
-            showToast('Showing salary details...');
-        }
-        
-        // PDF Functions
-        function viewFullPDF() {
-            const pdfUrl = 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf';
-            window.open(pdfUrl, '_blank');
-        }
-        
-        function printPDF() {
-            window.print();
-        }
-        
-        function downloadFullPDF() {
-            downloadFile('full');
-        }
-        
-        function downloadSyllabus() {
-            downloadFile('syllabus');
-        }
-        
-        function downloadForm() {
-            downloadFile('application');
-        }
-        
-        // Navigation Functions
-        function scrollToTop() {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-            toggleMenu(); // Close menu after clicking
-        }
-        
-        function openOfficialSite() {
-            window.open('https://fci.gov.in/', '_blank');
-            toggleMenu(); // Close menu after clicking
-        }
-        
-        // Toast Notification
-        function showToast(message) {
-            // Remove existing toast if any
-            const existingToast = document.querySelector('.mobile-toast');
-            if (existingToast) {
-                existingToast.remove();
-            }
-            
-            // Create toast element
-            const toast = document.createElement('div');
-            toast.className = 'mobile-toast';
-            toast.innerHTML = message;
-            
-            // Style the toast
-            toast.style.cssText = `
-                position: fixed;
-                bottom: 20px;
-                left: 50%;
-                transform: translateX(-50%);
-                background: rgba(0, 0, 0, 0.8);
-                color: white;
-                padding: 12px 20px;
-                border-radius: 25px;
-                font-size: 14px;
-                z-index: 3000;
-                animation: toastSlideUp 0.3s ease;
-                max-width: 90%;
-                text-align: center;
-            `;
-            
-            document.body.appendChild(toast);
-            
-            // Remove toast after 3 seconds
-            setTimeout(() => {
-                toast.style.animation = 'toastSlideDown 0.3s ease';
-                setTimeout(() => {
-                    toast.remove();
-                }, 300);
-            }, 3000);
-        }
-        
-        // Add toast animation styles
-        const style = document.createElement('style');
-        style.textContent = `
-            @keyframes toastSlideUp {
-                from {
-                    transform: translateX(-50%) translateY(100%);
-                    opacity: 0;
-                }
-                to {
-                    transform: translateX(-50%) translateY(0);
-                    opacity: 1;
-                }
-            }
-            
-            @keyframes toastSlideDown {
-                from {
-                    transform: translateX(-50%) translateY(0);
-                    opacity: 1;
-                }
-                to {
-                    transform: translateX(-50%) translateY(100%);
-                    opacity: 0;
-                }
-            }
-        `;
-        document.head.appendChild(style);
-        
+    <!-- Download Button -->
+    <a class="download-btn" href="FCI AG 3 General Post.pdf" download>
+        Download PDF
+    </a>
+
+    <!-- PDF Viewer -->
+    <iframe src="FCI AG 3 General Post.pdf"></iframe>
+
+</body>
+</html>

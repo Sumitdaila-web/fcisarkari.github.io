@@ -2,118 +2,894 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>FCI Result</title>
- <style>
-        body {
-            font-family: Arial, sans-serif;
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FCI Recruitment 2026 Notification, Eligibility, 33566 Vacancies</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
             margin: 0;
-            padding: 20px;
-            background: #f9f9f9;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
+
+        :root {
+            --primary: #1a4c8c;
+            --secondary: #e63946;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --gray: #6c757d;
+            --success: #28a745;
+            --warning: #ffc107;
+        }
+
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
         .container {
-            max-width: 1000px;
-            margin: auto;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--primary), #0a2c5e);
+            color: white;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo i {
+            font-size: 28px;
+            color: #ffcc00;
+        }
+
+        .logo h1 {
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .logo span {
+            font-size: 12px;
+            opacity: 0.8;
+        }
+
+        .date-time {
+            font-size: 14px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 8px 15px;
+            border-radius: 20px;
+        }
+
+        /* Banner Section */
+        .banner {
+            background: linear-gradient(rgba(26, 76, 140, 0.9), rgba(26, 76, 140, 0.8)), url('https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 40px 0;
             text-align: center;
+            margin-bottom: 30px;
         }
-        .description {
-            background: #ffffff;
-            padding: 20px;
+
+        .banner h2 {
+            font-size: 36px;
             margin-bottom: 15px;
-            border-radius: 6px;
-            box-shadow: 0 0 5px rgba(0,0,0,0.1);
-            text-align: left;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
         }
-        iframe {
-            width: 100%;
-            height: 90vh;
-            border: 1px solid #ccc;
-            background: #fff;
+
+        .banner p {
+            font-size: 18px;
+            max-width: 800px;
+            margin: 0 auto 20px;
         }
-        .download-btn {
+
+        .cta-button {
             display: inline-block;
-            margin: 15px 0;
-            padding: 10px 25px;
-            background: #007bff;
-            color: #fff;
-            text-decoration: none;
+            background-color: var(--secondary);
+            color: white;
+            padding: 12px 30px;
             border-radius: 5px;
-            font-weight: bold;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
-        .download-btn:hover {
-            background: #0056b3;
+
+        .cta-button:hover {
+            background-color: #c1121f;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Navigation Tabs */
+        .nav-tabs {
+            display: flex;
+            background-color: white;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .tab {
+            flex: 1;
+            min-width: 150px;
+            text-align: center;
+            padding: 15px;
+            cursor: pointer;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+
+        .tab:hover {
+            background-color: #f0f5ff;
+        }
+
+        .tab.active {
+            color: var(--primary);
+            border-bottom: 3px solid var(--primary);
+            background-color: #f0f5ff;
+        }
+
+        /* Content Sections */
+        .content-section {
+            display: none;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 30px;
+        }
+
+        .content-section.active {
+            display: block;
+        }
+
+        .section-title {
+            color: var(--primary);
+            border-left: 5px solid var(--secondary);
+            padding-left: 15px;
+            margin-bottom: 25px;
+            font-size: 24px;
+        }
+
+        /* Table Styles */
+        .table-container {
+            overflow-x: auto;
+            margin: 20px 0;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        table th {
+            background-color: var(--primary);
+            color: white;
+            padding: 12px 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        table tr:hover {
+            background-color: #f0f5ff;
+        }
+
+        .highlight {
+            background-color: #fff3cd !important;
+            font-weight: 600;
+        }
+
+        /* Info Cards */
+        .info-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            margin: 25px 0;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+            border-top: 4px solid var(--primary);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .card h3 i {
+            color: var(--secondary);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 40px 0 20px;
+            margin-top: 50px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer-section h3 {
+            color: #ffcc00;
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-section ul li a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section ul li a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            color: #aaa;
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+            
+            .banner h2 {
+                font-size: 28px;
+            }
+            
+            .tab {
+                min-width: 120px;
+                padding: 12px 5px;
+                font-size: 14px;
+            }
+            
+            .content-section {
+                padding: 20px;
+            }
+        }
+
+        /* PDF-like styling */
+        .pdf-marker {
+            background-color: #ffebee;
+            padding: 15px;
+            border-left: 4px solid #f44336;
+            margin: 15px 0;
+            font-style: italic;
+        }
+
+        .page-indicator {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            padding: 3px 10px;
+            border-radius: 3px;
+            font-size: 12px;
+            margin-bottom: 10px;
         }
     </style>
 </head>
 <body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-warehouse"></i>
+                    <div>
+                        <h1>FCI Recruitment 2026</h1>
+                        <span>Food Corporation of India</span>
+                    </div>
+                </div>
+                <div class="date-time">
+                    <i class="far fa-calendar-alt"></i> 03/02/2026, 11:23
+                </div>
+            </div>
+        </div>
+    </header>
 
-    <h2>Fcisarkari</h2>
-    <h3>FCI Recruitment 2026 – Overview</h3>
+    <!-- Banner Section -->
+    <section class="banner">
+        <div class="container">
+            <h2>FCI Recruitment 2026 Notification</h2>
+            <p>Eligibility, 33566 Vacancies for Category 1, 2, 3, and 4 Posts</p>
+            <a href="#apply" class="cta-button">
+                <i class="fas fa-file-download"></i> Get Free Study Materials & Mock Tests
+            </a>
+        </div>
+    </section>
 
-<table border="1" cellpadding="10" cellspacing="0" style="width:100%; border-collapse:collapse;">
-    <tr>
-        <th align="left">Organisation</th>
-        <td>Food Corporation of India (FCI)</td>
-    </tr>
-    <tr>
-        <th align="left">Posts</th>
-        <td>Category I, II, III & IV</td>
-    </tr>
-    <tr>
-        <th align="left">Vacancies</th>
-        <td>33,566 (Expected for Category II & III)</td>
-    </tr>
-    <tr>
-        <th align="left">Mode of Application</th>
-        <td>Online</td>
-    </tr>
-    <tr>
-        <th align="left">Apply Online Dates</th>
-        <td>To be Notified</td>
-    </tr>
-    <tr>
-        <th align="left">Selection Process</th>
-        <td>Online Test, Interview</td>
-    </tr>
-    <tr>
-        <th align="left">Salary</th>
-        <td>Up to ₹71,000 per month</td>
-    </tr>
-    <tr>
-        <th align="left">Job Location</th>
-        <td>Across India</td>
-    </tr>
-    <tr>
-        <th align="left">Official Website</th>
-        <td>
-            <a href="https://fci.gov.in/" target="_blank">https://fci.gov.in/</a>
-        </td>
-    </tr>
-</table>
+    <!-- Main Content Container -->
+    <div class="container">
+        <!-- Navigation Tabs -->
+        <div class="nav-tabs">
+            <div class="tab active" data-target="overview">Overview</div>
+            <div class="tab" data-target="vacancies">Vacancies</div>
+            <div class="tab" data-target="eligibility">Eligibility</div>
+            <div class="tab" data-target="exam">Exam Pattern</div>
+            <div class="tab" data-target="salary">Salary & Cut-off</div>
+            <div class="tab" data-target="faq">FAQs</div>
+        </div>
 
-<p>
-Know the important details regarding <strong>FCI Recruitment 2026</strong> conducted by the
-<strong>Food Corporation of India (FCI)</strong>. FCI releases recruitment notifications for
-various Category posts including Category I, II, III, and IV. The complete information such as
-vacancies, eligibility criteria, selection process, salary structure, and application dates
-will be updated after the official notification PDF is released.
-</p>
+        <!-- Overview Section -->
+        <section id="overview" class="content-section active">
+            <span class="page-indicator">Page 1</span>
+            <h2 class="section-title">FCI Recruitment 2026 - Overview</h2>
+            
+            <p>The Food Corporation of India (FCI) conducts the FCI Exams to recruit eligible candidates for various categories [Category 1, 2, 3, and 4]. FCI is one of the largest Public Sector undertakings that deals with food grain and supply chain management. Established on 14th January 1965 with its first district office in Thanjavur, Tamil Nadu, the FCI has been managing various depots and private equity godowns all across the country.</p>
+            
+            <p>For the year 2026, FCI Recruitment 2026 Notification PDF is expected to be released for 33566 or more vacancies.</p>
+            
+            <div class="table-container">
+                <table>
+                    <tr>
+                        <th colspan="2" style="text-align: center;">FCI Recruitment 2026-Overview</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Organisation</strong></td>
+                        <td>Food Corporation of India</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Posts</strong></td>
+                        <td>Category 1, 2, 3, 4</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Vacancies</strong></td>
+                        <td>33566 (Category 2 & 3)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Mode of Application</strong></td>
+                        <td>Online</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Apply Online Dates</strong></td>
+                        <td>To be notified</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Selection Process</strong></td>
+                        <td>Online Test, Interview</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <h3 class="section-title" style="font-size: 20px; margin-top: 30px;">Important Dates</h3>
+            <div class="table-container">
+                <table>
+                    <tr>
+                        <th>Events</th>
+                        <th>Important Dates</th>
+                    </tr>
+                    <tr>
+                        <td>Notification Release Date</td>
+                        <td>To be notified</td>
+                    </tr>
+                    <tr>
+                        <td>Apply Online Starts</td>
+                        <td>To be notified</td>
+                    </tr>
+                    <tr>
+                        <td>Last Date To Apply Online</td>
+                        <td>To be notified</td>
+                    </tr>
+                    <tr>
+                        <td>Last date for submission of application fee</td>
+                        <td>To be notified</td>
+                    </tr>
+                    <tr>
+                        <td>Availability of FCI Admit Card 2026</td>
+                        <td>To be notified</td>
+                    </tr>
+                    <tr>
+                        <td>FCI Exam Date 2026</td>
+                        <td>--</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
 
+        <!-- Vacancies Section -->
+        <section id="vacancies" class="content-section">
+            <span class="page-indicator">Page 2-3</span>
+            <h2 class="section-title">FCI Vacancy 2026</h2>
+            
+            <p>Food Corporation of India (FCI) has announced 33566 vacancies for various posts under Category 2 and 3 posts for the year 2026. The candidates can check the tentative vacancies released by FCI and the final vacancies will be released with the official notification.</p>
+            
+            <div class="pdf-marker">
+                Note: The table below shows tentative category-wise and zone-wise vacancies. Final vacancies will be announced in the official notification.
+            </div>
+            
+            <h3 style="color: var(--primary); margin: 20px 0 15px;">Category-wise Vacancy Distribution</h3>
+            <div class="table-container">
+                <table>
+                    <tr>
+                        <th>Post</th>
+                        <th>North Zone</th>
+                        <th>South Zone</th>
+                        <th>East Zone</th>
+                        <th>West Zone</th>
+                        <th>Total</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Manager(Depot)</strong></td>
+                        <td>2562</td>
+                        <td>2729</td>
+                        <td>1711</td>
+                        <td>4526</td>
+                        <td class="highlight">11528</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Manager(QC)</strong></td>
+                        <td>2031</td>
+                        <td>949</td>
+                        <td>1651</td>
+                        <td>5312</td>
+                        <td class="highlight">9943</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Manager(Movt)</strong></td>
+                        <td>685</td>
+                        <td>810</td>
+                        <td>805</td>
+                        <td>624</td>
+                        <td class="highlight">2924</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Manager(Hindi)</strong></td>
+                        <td>42</td>
+                        <td>24</td>
+                        <td>40</td>
+                        <td>54</td>
+                        <td class="highlight">160</td>
+                    </tr>
+                    <tr class="highlight">
+                        <td><strong>TOTAL</strong></td>
+                        <td>5320</td>
+                        <td>4512</td>
+                        <td>4207</td>
+                        <td>10516</td>
+                        <td><strong>24555</strong></td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class="info-cards">
+                <div class="card">
+                    <h3><i class="fas fa-info-circle"></i> Important Note</h3>
+                    <p>The vacancies mentioned are tentative and based on data as on 30.06.2024. Final vacancies for 2026 will be announced in the official notification.</p>
+                </div>
+                <div class="card">
+                    <h3><i class="fas fa-map-marker-alt"></i> Zone Information</h3>
+                    <p>Vacancies are distributed across four zones: North, South, East, and West. Candidates can apply for any zone based on their preference and eligibility.</p>
+                </div>
+                <div class="card">
+                    <h3><i class="fas fa-file-alt"></i> Official Notification</h3>
+                    <p>The official notification with complete vacancy details will be released on the official website: <strong>https://fci.gov.in/</strong></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Eligibility Section -->
+        <section id="eligibility" class="content-section">
+            <span class="page-indicator">Page 4-5</span>
+            <h2 class="section-title">FCI Recruitment 2026 Eligibility Criteria</h2>
+            
+            <p>The detailed eligibility criteria for various vacancies have been released along with the FCI notification PDF. The expected eligibility is as follows:</p>
+            
+            <h3 style="color: var(--primary); margin: 25px 0 15px;">Educational Qualification</h3>
+            <div class="table-container">
+                <table>
+                    <tr>
+                        <th>Post</th>
+                        <th>Education Qualification</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Manager (General)</strong></td>
+                        <td>The candidates must be a Graduate degree or equivalent from a recognized university with 60% marks or CA/ICWA/CS</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Manager (Depot)</strong></td>
+                        <td>The candidates must be a Graduate degree or equivalent from a recognized university with 60% marks or CA/ICWA/CS</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Manager (Accounts)</strong></td>
+                        <td>B.Com from a recognized University AND Post Graduate Full-time MBA (Fin) Degree/Diploma OR Membership of the Institute of Company Secretaries of India</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Manager (Technical)</strong></td>
+                        <td>B.Sc. in Agriculture from a recognized University OR B.Tech degree or B.E degree in Food Science from a recognized University</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Manager (Civil Engineer)</strong></td>
+                        <td>Degree in Civil Engineering from a recognized University or equivalent</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Manager (Electrical/Mechanical)</strong></td>
+                        <td>Degree in Electrical Engineering or Mechanical Engineering from a recognized University</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Manager (Hindi)</strong></td>
+                        <td>Master's Degree of a recognized University or equivalent in Hindi with 5 years experience of terminological work in Hindi and/or translation work</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <h3 style="color: var(--primary); margin: 25px 0 15px;">Age Limit</h3>
+            <div class="table-container">
+                <table>
+                    <tr>
+                        <th>Category</th>
+                        <th>Upper Age Limit</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Manager</strong></td>
+                        <td>28 years</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Manager (Hindi)</strong></td>
+                        <td>35 years</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <h3 style="color: var(--primary); margin: 25px 0 15px;">Age Relaxation</h3>
+            <div class="table-container">
+                <table>
+                    <tr>
+                        <th>Category</th>
+                        <th>Age Relaxation</th>
+                    </tr>
+                    <tr>
+                        <td>OBC</td>
+                        <td>3 years</td>
+                    </tr>
+                    <tr>
+                        <td>SC / ST</td>
+                        <td>5 years</td>
+                    </tr>
+                    <tr>
+                        <td>Departmental (FCI) employees</td>
+                        <td>Up to 50 years</td>
+                    </tr>
+                    <tr>
+                        <td>PWD-General</td>
+                        <td>10 years</td>
+                    </tr>
+                    <tr>
+                        <td>PWD-OBC</td>
+                        <td>13 years</td>
+                    </tr>
+                    <tr>
+                        <td>PWD-SC / ST</td>
+                        <td>15 years</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <h3 style="color: var(--primary); margin: 25px 0 15px;">Application Fee</h3>
+            <div class="table-container">
+                <table>
+                    <tr>
+                        <th>Categories</th>
+                        <th>Fee</th>
+                    </tr>
+                    <tr>
+                        <td>UR / OBC / EWS</td>
+                        <td>Rs. 800/-</td>
+                    </tr>
+                    <tr>
+                        <td>SC / ST / PWD / Female</td>
+                        <td>Nil</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <!-- Exam Pattern Section -->
+        <section id="exam" class="content-section">
+            <span class="page-indicator">Page 6-8</span>
+            <h2 class="section-title">FCI Recruitment 2026 Exam Pattern & Syllabus</h2>
+            
+            <h3 style="color: var(--primary); margin: 20px 0 15px;">Phase 1 Exam Pattern</h3>
+            <div class="pdf-marker">
+                <p><strong>Important Notes:</strong></p>
+                <ol>
+                    <li>In Phase-I, the test will be Objective type (Multiple Choice Questions).</li>
+                    <li>Each question will carry an equal 1 (one) mark.</li>
+                    <li>For each wrong answer, there will be a negative marking of one-fourth (1/4) of the mark assigned to that question.</li>
+                    <li>If a question is left blank, i.e. no answer is marked by the candidate; there will be no negative marking for that question.</li>
+                    <li>The marks obtained in Phase-I will NOT be reckoned in the final merit ranking.</li>
+                </ol>
+            </div>
+            
+            <div class="table-container">
+                <table>
+                    <tr>
+                        <th>Section</th>
+                        <th>No. of Questions</th>
+                        <th>Max. Marks</th>
+                        <th>Time Duration</th>
+                    </tr>
+                    <tr>
+                        <td>English Language</td>
+                        <td>25</td>
+                        <td>25</td>
+                        <td>15 minutes</td>
+                    </tr>
+                    <tr>
+                        <td>Reasoning Ability</td>
+                        <td>25</td>
+                        <td>25</td>
+                        <td>15 minutes</td>
+                    </tr>
+                    <tr>
+                        <td>Numerical Aptitude</td>
+                        <td>25</td>
+                        <td>25</td>
+                        <td>15 minutes</td>
+                    </tr>
+                    <tr>
+                        <td>General Studies</td>
+                        <td>25</td>
+                        <td>25</td>
+                        <td>15 minutes</td>
+                    </tr>
+                    <tr class="highlight">
+                        <td><strong>Total</strong></td>
+                        <td><strong>100</strong></td>
+                        <td><strong>100</strong></td>
+                        <td><strong>60 minutes</strong></td>
+                    </tr>
+                </table>
+            </div>
+            
+            <p><strong>Note:</strong> General Studies* comprising of Indian History, Indian Economy, Geography & General Science up to Class 8th level - 20 questions Current Affairs - 5 questions</p>
+            
+            <h3 style="color: var(--primary); margin: 25px 0 15px;">Detailed Syllabus</h3>
+            
+            <div class="info-cards">
+                <div class="card">
+                    <h3><i class="fas fa-language"></i> English Language</h3>
+                    <ul style="padding-left: 20px; margin-top: 10px;">
+                        <li>Vocabulary based questions</li>
+                        <li>One word substitution</li>
+                        <li>Jumbled Paragraph/Sentences</li>
+                        <li>Paragraph Fillers</li>
+                        <li>Paragraph Conclusion</li>
+                        <li>Paragraph/Sentences Restatement</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3><i class="fas fa-brain"></i> Reasoning Ability</h3>
+                    <ul style="padding-left: 20px; margin-top: 10px;">
+                        <li>Puzzles, Seating Arrangements</li>
+                        <li>Direction Sense</li>
+                        <li>Blood Relation</li>
+                        <li>Syllogism</li>
+                        <li>Order and Ranking</li>
+                        <li>Coding-Decoding</li>
+                        <li>Machine Input-Output</li>
+                        <li>Inequalities</li>
+                        <li>Alpha-Numeric-Symbol Series</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3><i class="fas fa-calculator"></i> Numerical Ability</h3>
+                    <ul style="padding-left: 20px; margin-top: 10px;">
+                        <li>Data Interpretation</li>
+                        <li>Inequalities (Quadratic Equations)</li>
+                        <li>Number Series</li>
+                        <li>Approximation and Simplification</li>
+                        <li>Data Sufficiency</li>
+                        <li>Miscellaneous Arithmetic Problems</li>
+                        <li>Profit and Loss</li>
+                        <li>SI & CI</li>
+                        <li>Problem on Ages</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div style="background-color: #e8f4f8; padding: 20px; border-radius: 8px; margin-top: 20px;">
+                <h4 style="color: var(--primary); margin-bottom: 10px;">General Studies Syllabus Includes:</h4>
+                <ul style="columns: 2; padding-left: 20px;">
+                    <li>History - India & World</li>
+                    <li>Indian Polity</li>
+                    <li>Science & Technology</li>
+                    <li>Indian Constitution</li>
+                    <li>Indian Economy</li>
+                    <li>Environmental Issues</li>
+                    <li>Geography</li>
+                    <li>Current Affairs</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Salary & Cut-off Section -->
+        <section id="salary" class="content-section">
+            <span class="page-indicator">Page 8</span>
+            <h2 class="section-title">FCI Recruitment 2026 Salary & Cut Off</h2>
+            
+            <h3 style="color: var(--primary); margin: 20px 0 15px;">Salary Package</h3>
+            <div style="background-color: #e7f7e7; padding: 20px; border-radius: 8px; margin-bottom: 25px;">
+                <p>Food Corporation of India offers a lucrative salary package to candidates shortlisted for the post of FCI Manager. The managers will draw a starting basic pay of <strong>Rs. 40,000/- p.m.</strong> (for a training period of 6 months) applicable to Officers in category II and they will be eligible for Dearness Allowance, House Keep Up Allowance, House Rent Allowance, and Grade Allowance.</p>
+                <p style="margin-top: 10px;"><strong>At present, the initial monthly Gross emoluments are approximately Rs. 71,000 p.m.</strong></p>
+            </div>
+            
+            <h3 style="color: var(--primary); margin: 20px 0 15px;">Previous Year Cut Off (2018 Phase 1)</h3>
+            <div class="table-container">
+                <table>
+                    <tr>
+                        <th>Category</th>
+                        <th>FCI Cut Off</th>
+                    </tr>
+                    <tr>
+                        <td>General</td>
+                        <td>75</td>
+                    </tr>
+                    <tr>
+                        <td>OBC</td>
+                        <td>72</td>
+                    </tr>
+                    <tr>
+                        <td>SC</td>
+                        <td>65</td>
+                    </tr>
+                    <tr>
+                        <td>ST</td>
+                        <td>62</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class="pdf-marker">
+                <p><strong>Note:</strong> FCI releases the FCI Cut-Off & Score Card post the declaration of its result. The FCI Manager Cut-Off and Score Card will help candidates analyze their scores and compare them with the scores of other candidates.</p>
+            </div>
+        </section>
+
+        <!-- FAQs Section -->
+        <section id="faq" class="content-section">
+            <span class="page-indicator">Page 9</span>
+            <h2 class="section-title">Frequently Asked Questions (FAQs)</h2>
+            
+            <div style="margin-top: 20px;">
+                <div style="background-color: white; border-left: 4px solid var(--primary); padding: 15px 20px; margin-bottom: 15px; border-radius: 0 5px 5px 0; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+                    <h3 style="color: var(--primary); margin-bottom: 8px;">When will FCI Recruitment 2026 Notification release?</h3>
+                    <p>The official notification for FCI Recruitment 2026 is expected to be released soon on the official website <strong>https://fci.gov.in/</strong>. The exact date will be announced by the Food Corporation of India.</p>
+                </div>
+                
+                <div style="background-color: white; border-left: 4px solid var(--primary); padding: 15px 20px; margin-bottom: 15px; border-radius: 0 5px 5px 0; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+                    <h3 style="color: var(--primary); margin-bottom: 8px;">What are the posts in FCI Recruitment 2026?</h3>
+                    <p>FCI Recruitment 2026 is expected to include posts in Category 1, 2, 3, and 4. The major posts include Manager (General), Manager (Depot), Manager (Accounts), Manager (Technical), Manager (Civil Engineer), Manager (Electrical/Mechanical), and Manager (Hindi).</p>
+                </div>
+                
+                <div style="background-color: white; border-left: 4px solid var(--primary); padding: 15px 20px; margin-bottom: 15px; border-radius: 0 5px 5px 0; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+                    <h3 style="color: var(--primary); margin-bottom: 8px;">What is the selection process for FCI Recruitment 2026?</h3>
+                    <p>The selection process for FCI Recruitment 2026 consists of two phases: Phase 1 - Online Test (Objective type) and Phase 2 - Interview. The marks obtained in Phase-I will NOT be reckoned in the final merit ranking.</p>
+                </div>
+                
+                <div style="background-color: white; border-left: 4px solid var(--primary); padding: 15px 20px; margin-bottom: 15px; border-radius: 0 5px 5px 0; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+                    <h3 style="color: var(--primary); margin-bottom: 8px;">How many vacancies are expected to be released by FCI?</h3>
+                    <p>FCI is expected to release approximately <strong>33,566 vacancies</strong> for Category 2 and 3 posts in 2026. This includes various managerial positions across different zones in India.</p>
+                </div>
+            </div>
+            
+            <h3 style="color: var(--primary); margin: 30px 0 15px;">Trending Articles</h3>
+            <div style="background-color: #f9f9f9; padding: 20px; border-radius: 8px;">
+                <ul style="columns: 2; padding-left: 20px;">
+                    <li>RBI Office Attendant Recruitment 2026 for 572 Vacancies</li>
+                    <li>JAIIB Registration 2026 Starts, Apply Online Link</li>
+                    <li>RRB Group D Notification 2026 Out (22000 Posts)</li>
+                    <li>KVS NVS Answer Key 2026 Download Link</li>
+                    <li>EMRS Result 2026 Link (Tier 1)</li>
+                    <li>SSC MTS Admit Card 2026 Download Link</li>
+                    <li>CTET Admit Card Download 2026 Link</li>
+                    <li>SSC CHSL Result 2025 & Merit List PDF</li>
+                    <li>SBI Clerk Mains Result 2025 Link</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#overview">Overview</a></li>
+                        <li><a href="#vacancies">Vacancies</a></li>
+                        <li><a href="#eligibility">Eligibility</a></li>
+                        <li><a href="#exam">Exam Pattern</a></li>
+                        <li><a href="#salary">Salary & Cut-off</a></li>
+                        <li><a href="#faq">FAQs</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Important Information</h3>
+                    <ul>
+                        <li><a href="#">Official Notification (Coming Soon)</a></li>
+                        <li><a
+
+    
     <!-- Download Button -->
 
+                            
     <!-- PDF Viewer -->
     <iframe src="FCI AG 3 General Post.pdf"></iframe>
- <div class="description">
-        <p>
-            <strong>FCI Sarkari</strong> provides the latest and most reliable information related to
-            Food Corporation of India (FCI) government jobs. Here you can find details about
-            FCI recruitment, eligibility criteria, syllabus, exam pattern, admit cards,
-            results, and official notifications.
-        </p>
-        <p>
-            This PDF contains important FCI Sarkari updates and documents for candidates
-            preparing for FCI examinations. You can view the PDF online or download it
-            for offline.
-        </p>
-    </div>
-</body>
+
 </html>
